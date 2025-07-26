@@ -24,7 +24,13 @@
             <ul>
                 <li><a href="#about" class="menu-link">自己紹介</a></li>
                 <br>
-                <li><a href="#projects" class="menu-link">プロジェクト</a></li>
+                <ul class="submenu">
+                    <li><a href="#projects" class="menu-link">プロジェクト</a>
+                    <li><a href="#mouse-sketch" class="menu-link-sub">ネズミスケッチ</a></li>
+                    <li><a href="#mouse-todo" class="menu-link-sub">ネズミTODOリスト</a></li>
+                    <li><a href="#nezu-tools" class="menu-link-sub">ネズミツールズ</a></li>
+                </ul>
+                </li>
                 <br>
                 <li><a href="#contact" class="menu-link">お問い合わせ</a></li>
             </ul>
@@ -57,11 +63,37 @@
             <h2>プロジェクト</h2>
             <p>現在進行中のプロジェクトや過去の作品を紹介します。</p>
             <ul>
-                <li><a href="https://mouse-sketch.netlify.app/">ネズミスケッチ</a></li>
-                <br>
-                <li><a href="https://mouse-todolist.netlify.app/">ネズミTODOlist</a></li>
-                <br>
-                <li><a href="https://example.com/nezu-tools">ネズミツールズ</a></li>
+                <section class="project-item" id="mouse-sketch">
+                    <li><a class="project-name" href="https://mouse-sketch.netlify.app/">ネズミスケッチ</a></li>
+                    <br>
+                    <p>ネズミスケッチとは、ネズミをテーマにしたドット絵アプリです。
+                        ユーザーは自由にネズミのドット絵を描くことができます。<br>
+                        アニメーションも可能で、描いた絵を保存して共有することもできます。
+                        <br>
+                        レイヤー機能もあり、複数のレイヤーを使って複雑な絵を描くことができます。
+                    </p>
+                </section>
+                <section class="project-item" id="mouse-todo">
+                    <li><a class="project-name" href="https://mouse-todolist.netlify.app/">ネズミTODOlist</a></li>
+                    <br>
+                    <p>ネズミTODOlistは、タスク管理をテーマにしたアプリです。
+                        ユーザーはタスクを追加、編集、削除することができます。<br>
+                        完了したタスクはチェックを入れることで管理できます。
+                        <br>
+                        シンプルで使いやすいインターフェースを提供しています。<br>
+                        ログイン機能があり、ユーザーごとにタスクを同期処理して管理できます。
+                        <br>
+                    </p>
+                </section>
+                <section class="project-item" id="nezu-tools">
+                    <li><a class="project-name" href="https://example.com/nezu-tools">ネズミツールズ</a></li>
+                    <br>
+                    <p>ネズミツールズは、様々な便利なツールを集めたウェブサイトです。
+                        ユーザーは簡単にアクセスして、日常のタスクを効率化できます。<br>
+                        例えば、計算機やカレンダー、メモ帳などの機能があります。
+                        <br>
+                        ユーザーインターフェースはシンプルで直感的に操作できます。
+                </section>
             </ul>
         </section>
         <section id="contact" class="contact">

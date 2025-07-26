@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const sections = [
         { id: 'about', link: null },
         { id: 'projects', link: null },
+        { id: 'mouse-sketch', link: null },
+        { id: 'mouse-todo', link: null },
+        { id: 'nezu-tools', link: null },
         { id: 'contact', link: null }
     ];
     sections.forEach(s => {

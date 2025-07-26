@@ -182,6 +182,23 @@ nav {
     color: #333333;
 }
 
+.projects .project-item {
+    margin-bottom: 20px;
+    box-shadow: #000000 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border: #000000 1px solid;
+}
+
+.project-name {
+    font-weight: bold;
+    color: #000000c3;
+    text-decoration: none;
+    background-color: #b0b0b0c3;
+}
+
+.project-name:hover {
+    text-decoration: underline;
+}
+
 /* ハンバーガーメニューボタン */
 .menu-toggle {
     display: none;
@@ -307,6 +324,46 @@ a.menu-link.ripple-animate {
         background-color: #bfbfbf;
         box-shadow: 0 0 0 0 #bfbfbf00;
     }
+}
+
+.submenu {
+    top: 100%;
+    left: 0;
+    background: #acacac;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 200;
+    padding: 8px 12px;
+    height: 180px;
+}
+
+.submenu .menu-link {
+    background-color: #cecece;
+    color: #000000;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin: 4px 0;
+    text-decoration: none;
+}
+
+.submenu .menu-link:hover {
+    background-color: #626262;
+    color: #fff;
+}
+
+.submenu .menu-link-sub {
+    background-color: #383838;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin: 4px 0;
+    text-decoration: none;
+}
+
+.submenu .menu-link-sub:hover {
+    background-color: #626262;
+    color: #fff;
 }
 
 /* お問い合わせセクションのスタイル */
