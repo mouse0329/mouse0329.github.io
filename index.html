@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>ねずみのポートフォリオサイト</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <script src="colorMouse.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <header class="header-bar">
+        <h1><img src="img/MouseClear.png" alt="ネズミのポートフォリオサイト" width="100" height="100">ねずみのポートフォリオサイト</h1>
+    </header>
+    <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="sideMenu">
+        <span></span><span></span><span></span>
+    </button>
+    <div class="side-menu" id="sideMenu">
+        <p>メニュー</p>
+        <nav>
+            <ul>
+                <li><a href="#about" class="menu-link">自己紹介</a></li>
+                <br>
+                <li><a href="#projects" class="menu-link">プロジェクト</a></li>
+                <br>
+                <li><a href="#contact" class="menu-link">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="header-bar-height"></div>
+        <div class="header" id="header">
+            <h1>ねずみのポートフォリオサイト</h1>
+            <p>ようこそ！これはねずみのポートフォリオサイトです。</p>
+            <p>ここでは、ねずみの作品や活動を紹介しています。</p>
+            <p>最新のプロジェクト情報をチェックしてください。</p>
+            <P>マスコットキャラクター</P>
+            <div id="colorTarget">
+                <img src="img/MouseClear.png" alt="ネズミチュー">
+                <div class="speech-bubble" id="speechBubble">おはようチュー！</div>
+            </div>
+        </div>
+        <section id="about" class="about">
+            <h2>自己紹介</h2>
+            <p>私はjs,ts,html,cssを使ってウェブサイトを作成しています。</p>
+            <p>趣味はプログラミングです。</p>
+            <p>ブレンダーを使った3Dモデリングにも挑戦しています。</p>
+            <p>Unityを使ったゲーム開発も少しずつ学んでいます。</p>
+            <p>デザインはあまり得意ではありませんが、楽しんで取り組んでいます。</p>
+            <h1>私のGithubアカウントは<a href="https://github.com/mouse0329">mouse0329</a>です。</h1>
+            <p>私のポートフォリオをぜひご覧ください。</p>
+        </section>
+        <section id="projects" class="projects">
+            <h2>プロジェクト</h2>
+            <p>現在進行中のプロジェクトや過去の作品を紹介します。</p>
+            <ul>
+                <li><a href="https://mouse-sketch.netlify.app/">ネズミスケッチ</a></li>
+                <br>
+                <li><a href="https://mouse-todolist.netlify.app/">ネズミTODOlist</a></li>
+                <br>
+                <li><a href="https://example.com/nezu-tools">ネズミツールズ</a></li>
+            </ul>
+        </section>
+        <section id="contact" class="contact">
+            <h2>お問い合わせ</h2>
+            <p>ご意見やご質問がありましたら、以下のフォームからお問い合わせください。</p>
+            <form name="contact" method="POST" data-netlify="true">
+                <label for="name">名前:</label>
+                <input type="text" id="name" name="名前" required>
+                <br>
+                <label for="email">メールアドレス:</label>
+                <input type="email" id="email" name="メールアドレス" required>
+                <br>
+                <label for="message">メッセージ:</label>
+                <textarea id="message" name="メッセージ" rows="4" required></textarea>
+                <br>
+                <button type="submit">送信</button>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>
