@@ -1,20 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8" />
-    <title>ねずみのポートフォリオサイト</title>
+    <title>ねずみのポートフォリオサイト | Web開発・3D・ツール制作</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ねずみのポートフォリオサイトでは、Webアプリ、3Dモデリング、ツール開発などのプロジェクトを紹介しています。" />
+    <meta name="keywords" content="ポートフォリオ, Web開発, JavaScript, 3Dモデリング, ネズミ, ツール, Supabase" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-    <script src="colorMouse.js"></script>
+    <script src="script.js" defer></script>
+    <script src="colorMouse.js" defer></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- 構造化データ（JSON-LD） -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "ねずみ",
+    "url": "https://mouse-portfolio.netlify.app",
+    "sameAs": [
+      "https://github.com/mouse0329"
+    ],
+    "jobTitle": "Web開発者",
+    "description": "Webアプリ・ツール開発・3Dモデリングに取り組むネズミです。"
+  }
+  </script>
 </head>
 
 <body>
     <header class="header-bar">
-        <h1><img src="img/MouseClear.png" alt="ネズミのポートフォリオサイト" width="100" height="100">ねずみのポートフォリオサイト</h1>
+        <h1>
+            <img src="img/MouseClear.png" alt="ネズミのマスコットキャラ チューチュー" width="100" height="100">
+            ねずみのポートフォリオサイト
+        </h1>
     </header>
+
     <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="sideMenu">
         <span></span><span></span><span></span>
     </button>
@@ -38,90 +59,89 @@
     </div>
     <div class="container">
         <div class="header-bar-height"></div>
-        <div class="header" id="header">
-            <h1>ねずみのポートフォリオサイト</h1>
+        <header id="header" class="header">
+            <h2>ねずみのポートフォリオサイト</h2>
             <p>ようこそ！これはねずみのポートフォリオサイトです。</p>
             <p>ここでは、ねずみの作品や活動を紹介しています。</p>
             <p>最新のプロジェクト情報をチェックしてください。</p>
-            <br>
-            <P>マスコットキャラクターの紹介</P>
+            <h3>マスコットキャラクターの紹介</h3>
             <p>ねずみのチューチューです。</p>
             <div id="colorTarget">
-                <img src="img/MouseClear.png" alt="ネズミチュー">
+                <img src="img/MouseClear.png" alt="ネズミのマスコットキャラ チューチュー">
                 <div class="speech-bubble" id="speechBubble">おはようチュー！</div>
             </div>
-        </div>
+        </header>
+
         <section id="about" class="about">
             <h2>自己紹介</h2>
-            <p>私はjs,ts,html,cssを使ってウェブサイトを作成しています。</p>
+            <p>私はJavaScript、TypeScript、HTML、CSSを使ってウェブサイトを作成しています。</p>
             <p>趣味はプログラミングです。</p>
-            <p>ブレンダーを使った3Dモデリングにも挑戦しています。</p>
+            <p>Blenderを使った3Dモデリングにも挑戦しています。</p>
             <p>Unityを使ったゲーム開発も少しずつ学んでいます。</p>
             <p>デザインはあまり得意ではありませんが、楽しんで取り組んでいます。</p>
-            <h1>私のGithubアカウントは<a href="https://github.com/mouse0329">mouse0329</a>です。</h1>
+            <p>私のGitHubアカウントは <a href="https://github.com/mouse0329" target="_blank" rel="noopener">mouse0329</a>
+                です。
+            </p>
             <p>私のポートフォリオをぜひご覧ください。</p>
         </section>
+
         <section id="projects" class="projects">
             <h2>プロジェクト</h2>
             <p>現在進行中のプロジェクトや過去の作品を紹介します。</p>
-            <ul>
-                <section class="project-item" id="mouse-sketch">
-                    <li><a class="project-name" href="https://mouse-sketch.netlify.app/">ネズミスケッチ</a></li>
-                    <br>
-                    <img src="https://mouse-sketch.netlify.app/nezumi-drawing_icon.webp" alt="ネズミスケッチのアイコン" width="100"
-                        height="100">
-                    <img src="https://mouse-sketch.netlify.app/スクリーンショット.png" alt="ネズミスケッチのスクリーンショット" width="300"
-                        height="200">
-                    <p>ネズミスケッチとは、ネズミをテーマにしたドット絵アプリです。
-                        ユーザーは自由にネズミのドット絵を描くことができます。<br>
-                        アニメーションも可能で、描いた絵を保存して共有することもできます。
-                        <br>
-                        レイヤー機能もあり、複数のレイヤーを使って複雑な絵を描くことができます。
-                    </p>
-                </section>
-                <section class="project-item" id="mouse-todo">
-                    <li><a class="project-name" href="https://mouse-todolist.netlify.app/">ネズミTODOlist</a></li>
-                    <img src="https://mouse-todolist.netlify.app/img/TODOlist_ico.webp" alt="ネズミTODOリストのアイコン"
-                        width="100" height="100">
-                    <img src="https://mouse-todolist.netlify.app/img/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202025-07-26%20111925.png"
-                        alt="ネズミTODOリストのスクリーンショット" width="300" height="200">
-                    <br>
-                    <p>ネズミTODOlistは、タスク管理をテーマにしたアプリです。
-                        ユーザーはタスクを追加、編集、削除することができます。<br>
-                        完了したタスクはチェックを入れることで管理できます。
-                        <br>
-                        シンプルで使いやすいインターフェースを提供しています。<br>
-                        ログイン機能があり、ユーザーごとにタスクを同期処理して管理できます。
-                        <br>
-                    </p>
-                </section>
-                <section class="project-item" id="nezu-tools">
-                    <li><a class="project-name" href="https://example.com/nezu-tools">ネズミツールズ</a></li>
-                    <br>
-                    <p>ネズミツールズは、様々な便利なツールを集めたウェブサイトです。
-                        ユーザーは簡単にアクセスして、日常のタスクを効率化できます。<br>
-                        例えば、計算機やカレンダー、メモ帳などの機能があります。
-                        <br>
-                        ユーザーインターフェースはシンプルで直感的に操作できます。
-                </section>
-            </ul>
+
+            <section class="project-item" id="mouse-sketch">
+                <h3><a class="project-name" href="https://mouse-sketch.netlify.app/">ネズミスケッチ</a></h3>
+                <img src="https://mouse-sketch.netlify.app/nezumi-drawing_icon.webp" alt="ネズミスケッチのアイコン" width="100"
+                    height="100">
+                <img src="https://mouse-sketch.netlify.app/スクリーンショット.png" alt="ネズミスケッチのスクリーンショット" width="300"
+                    height="200">
+                <p>ネズミスケッチは、ネズミをテーマにしたドット絵アプリです。ユーザーは自由にネズミのドット絵を描くことができます。アニメーションやレイヤー機能もあり、保存・共有が可能です。</p>
+            </section>
+
+            <section class="project-item" id="mouse-todo">
+                <h3><a class="project-name" href="https://mouse-todolist.netlify.app/">ネズミTODOlist</a></h3>
+                <img src="https://mouse-todolist.netlify.app/img/TODOlist_ico.webp" alt="ネズミTODOリストのアイコン" width="100"
+                    height="100">
+                <img src="https://mouse-todolist.netlify.app/img/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202025-07-26%20111925.png"
+                    alt="ネズミTODOリストのスクリーンショット" width="300" height="200">
+                <p>ネズミTODOlistは、タスク管理をテーマにしたシンプルなアプリです。ユーザーはタスクを追加、編集、削除し、ログインすることでタスクを同期して管理できます。</p>
+            </section>
+
+            <section class="project-item" id="nezu-tools">
+                <h3><a class="project-name" href="https://example.com/nezu-tools">ネズミツールズ</a></h3>
+                <p>ネズミツールズは、計算機・カレンダー・メモ帳など便利なツールを集めたサイトです。直感的に操作できるシンプルなデザインが特徴です。</p>
+            </section>
         </section>
+
         <section id="contact" class="contact">
             <h2>お問い合わせ</h2>
             <p>ご意見やご質問がありましたら、以下のフォームからお問い合わせください。</p>
-            <form name="contact" method="POST" data-netlify="true" netlify>
+            <form name="contact" method="POST" data-netlify="true">
                 <label for="name">名前:</label>
-                <input type="text" id="name" name="名前" required>
-                <br>
+                <input type="text" id="name" name="名前" required><br>
+
                 <label for="email">メールアドレス:</label>
-                <input type="email" id="email" name="メールアドレス" required>
-                <br>
+                <input type="email" id="email" name="メールアドレス" required><br>
+
                 <label for="message">メッセージ:</label>
-                <textarea id="message" name="メッセージ" rows="4" required></textarea>
-                <br>
+                <textarea id="message" name="メッセージ" rows="4" required></textarea><br>
+
                 <button type="submit">送信</button>
             </form>
         </section>
+
+        <section id="copyright" class="copyright">
+            <h2>著作権情報</h2>
+            <p>このサイトおよび掲載されている全てのコンテンツ（画像、テキスト、ソースコード等）の著作権は、<a href="https://github.com/mouse0329"
+                    target="_blank">mouse0329</a> に帰属します。</p>
+            <p>無断での転載・複製・再配布を禁じます。</p>
+            <p>© 2025 <a href="https://github.com/mouse0329" target="_blank">mouse0329</a> All Rights Reserved.</p>
+        </section>
+
+        <footer>
+            <p>© 2025 <a href="https://github.com/mouse0329" target="_blank">mouse0329</a> All Rights Reserved.</p>
+        </footer>
+
     </div>
 </body>
 
