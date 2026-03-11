@@ -501,3 +501,6 @@ a.menu-link.ripple-animate {
         margin-right: 0 !important;
     }
 }
+.nezumis{
+    display: flex;
+}
