@@ -1,0 +1,1315 @@
+diff --git a/index.html b/index.html
+index 282fc4f..6b91840 100644
+--- a/index.html
++++ b/index.html
+@@ -1,133 +1,176 @@
+-<!DOCTYPE html>
+-<html lang="ja">
+-
+-<head>
+-    <meta charset="UTF-8" />
+-    <title>ねずみのポートフォリオサイト | Web開発・3D・ツール制作</title>
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+-    <meta name="description" content="ねずみのポートフォリオサイトでは、Webアプリ、3Dモデリング、ツール開発などのプロジェクトを紹介しています。" />
+-    <meta name="keywords" content="ポートフォリオ, Web開発, JavaScript, 3Dモデリング, ネズミ, ツール, Supabase" />
+-    <link rel="stylesheet" href="style.css" />
+-    <script src="colormouse.js"></script>
+-    <script src="script.js"></script>
+-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+-
+-    <!-- 構造化データ（JSON-LD） -->
+-    <script type="application/ld+json">
+-  {
+-    "@context": "https://schema.org",
+-    "@type": "Person",
+-    "name": "ねずみ",
+-    "url": "https://mouse-portfolio.netlify.app",
+-    "sameAs": [
+-      "https://github.com/mouse0329"
+-    ],
+-    "jobTitle": "Web開発者",
+-    "description": "Webアプリ・ツール開発・3Dモデリングに取り組むネズミです。"
+-  }
+-  </script>
+-</head>
+-
+-<body>
+-    <header class="header-bar">
+-        <h1>
+-            <img src="img/MouseClear.png" alt="ネズミのマスコットキャラ チューチュー" width="100" height="100">
+-            ねずみのポートフォリオサイト
+-        </h1>
+-    </header>
+-
+-    <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="sideMenu">
+-        <span></span><span></span><span></span>
+-    </button>
+-    <div class="side-menu" id="sideMenu">
+-        <p>メニュー</p>
+-        <nav>
+-            <ul>
+-                <li><a href="#about" class="menu-link">自己紹介</a></li>
+-                <br>
+-                <ul class="submenu">
+-                    <li><a href="#projects" class="menu-link">プロジェクト</a>
+-                    <li><a href="#mouse-sketch" class="menu-link-sub">ネズミスケッチ</a></li>
+-                    <li><a href="#inpaint-nezumi" class="menu-link-sub">Inpaint-nezumi</a></li>
+-                    <li><a href="#other-projects" class="menu-link-sub">その他のプロジェクト</a></li>
+-                </ul>
+-                </li>
+-                <br>
+-            </ul>
+-        </nav>
+-    </div>
+-    <div class="container">
+-        <div class="header-bar-height"></div>
+-        <header id="header" class="header">
+-            <h2>ねずみのポートフォリオサイト</h2>
+-            <p>ようこそ！これはねずみのポートフォリオサイトです。</p>
+-            <p>ここでは、ねずみの作品や活動を紹介しています。</p>
+-            <p>最新のプロジェクト情報をチェックしてください。</p>
+-            <h3>マスコットキャラクターの紹介</h3>
+-            <p>ねずみのチューチューです。</p>
+-            <div id="colorTarget">
+-                <img src="img/MouseClear.png" alt="ネズミのマスコットキャラ チューチュー">
+-                <div class="speech-bubble" id="speechBubble">おはようチュー！</div>
+-            </div>
+-        </header>
+-
+-        <section id="about" class="about">
+-            <h2>自己紹介</h2>
+-            <p>私はJavaScript、TypeScript、HTML、CSSを使ってウェブサイトを作成しています。</p>
+-            <p>趣味はプログラミングです。</p>
+-            <p>Blenderを使った3Dモデリングにも挑戦しています。</p>
+-            <p>Unityを使ったゲーム開発も少しずつ学んでいます。</p>
+-            <p>デザインはあまり得意ではありませんが、楽しんで取り組んでいます。</p>
+-            <p>私のGitHubアカウントは <a href="https://github.com/mouse0329" target="_blank" rel="noopener">mouse0329</a>
+-                です。
+-            </p>
+-            <p>私のポートフォリオをぜひご覧ください。</p>
+-        </section>
+-
+-        <section id="projects" class="projects">
+-            <h2>プロジェクト</h2>
+-            <p>現在進行中のプロジェクトや過去の作品を紹介します。</p>
+-
+-            <section class="project-item" id="mouse-sketch">
+-                <h3><a class="project-name" href="https://mouse-sketch.netlify.app/">ネズミスケッチ</a></h3>
+-                <dir class="nezumis">
+-                    <img src="data:image/webp;base64,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" alt="ネズミスケッチのアイコン" width="50" height="50">
+-                    <img src="https://mouse-sketch.web.app/img/nezumisuketitext.png" alt="ネズミスケッチのテキスト" >
+-                </dir>
+-                <img src="https://mouse-sketch.web.app/assets/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-BBBS5w4E.png" alt="ネズミスケッチのスクリーンショット" width="300"
+-                    height="200">
+-                <p>ネズミスケッチは、ネズミをテーマにしたドット絵アプリです。ユーザーは自由にネズミのドット絵を描くことができます。アニメーションやレイヤー機能もあり、保存・共有が可能です。</p>
+-            </section>
+-            <section class="project-item">
+-                <h3><a class="project-name" href="https://mouse-sketch.web.app/Inpaint-nezumi/">Inpaint-nezumi</a></h3>
+-                <img src="data:image/webp;base64,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" alt="Inpaint-nezumiのアイコン" width="100" height="100">
+-                <img src="/nezumi-inpaint.png" alt="Inpaint-nezumiのスクリーンショット" width="300" height="200">
+-                <p>Inpaint-nezumiは、画像の不要な部分を消すことができるツールです。ユーザーは消したい部分を選択し、AIが自然な背景で埋めてくれます。写真の修正やオブジェクトの削除に便利です。</p>
+-                <p>現在はベータ版で、今後さらに機能を追加していく予定です。</p>
+-                <p>これはossプロジェクトです。アパッチライセンスの下で公開されています。</p>
+-        </section>
+-        <section>
+-            <h3>その他のプロジェクト</h3>
+-            <ul>
+-                <li><a href="https://github.com/nezumi-sketch/mouse-sketch">ネズミスケッチ</a></li>
+-                <li><a href="https://github.com/nezumi-sketch/inpaint-nezumi">Inpaint-nezumi</a></li>
+-                <li><a href="https://nezumi-ai-game.web.app/">Nezumi AI Game鬼ごっこ</a></li>
+-                <li><a href="https://mouse-archive.web.app/?">ネズミの画像やプロジェクト保管庫</a></li>
+-                <li><a href="https://nezumi-color-changer.netlify.app/">ネズミカラーチェンジャー</a></li>
+-                <li><a href="https://encodehub.web.app/">動画のエンコードし直すエンコードハブ</a></li>
+-                <li><a href="https://synthesizer-chu-web.netlify.app/">シンセサイザーチューチュー</a></li>
+-            </ul>
+-        </section>
+-        </section>
+-
+-        <section id="copyright" class="copyright">
+-            <h2>著作権情報</h2>
+-            <p>このサイトおよび掲載されている全てのコンテンツ（画像、テキスト、ソースコード等）の著作権は、<a href="https://github.com/mouse0329"
+-                    target="_blank">mouse0329</a> に帰属します。</p>
+-            <p>無断での転載・複製・再配布を禁じます。</p>
+-            <p>© 2025 <a href="https://github.com/mouse0329" target="_blank">mouse0329</a> All Rights Reserved.</p>
+-        </section>
+-    </div>
+-</body>
+-
+-</html>
++<!DOCTYPE html>
++<html lang="ja">
++<head>
++  <meta charset="UTF-8" />
++  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++  <title>ねずみのポートフォリオ | Nezumi AI</title>
++  <meta name="description" content="プライバシー重視のローカルAIアプリ「Nezumi AI」を中心に紹介するねずみのポートフォリオサイトです。" />
++  <meta name="keywords" content="Nezumi AI, ねずみAI, ローカルAI, Android AI, GGUF, llama.cpp, mouse0329, Mouserat" />
++  <link rel="stylesheet" href="style.css" />
++  <link rel="icon" href="favicon.ico" type="image/x-icon" />
++  <script type="application/ld+json">
++  {
++    "@context": "https://schema.org",
++    "@type": "Person",
++    "name": "ねずみ",
++    "url": "https://mouse0329.github.io",
++    "sameAs": [
++      "https://github.com/mouse0329",
++      "https://huggingface.co/Mouserat"
++    ],
++    "jobTitle": "Android / AI 開発者",
++    "description": "プライバシー重視のローカルAIアプリ Nezumi AI を開発しています。"
++  }
++  </script>
++</head>
++<body>
++  <header class="site-header">
++    <div class="header-inner">
++      <a href="#" class="logo">
++        <img src="img/MouseClear.png" alt="チューチュー" width="48" height="48" onerror="this.style.display='none'">
++        <span>ねずみ</span>
++      </a>
++      <nav class="main-nav">
++        <a href="#nezumi-ai">Nezumi AI</a>
++        <a href="#huggingface">Hugging Face</a>
++        <a href="#others">その他</a>
++        <a href="https://github.com/mouse0329" target="_blank" rel="noopener">GitHub</a>
++      </nav>
++    </div>
++  </header>
++
++  <main>
++    <!-- Hero / Nezumi AI メイン -->
++    <section class="hero" id="nezumi-ai">
++      <div class="hero-content">
++        <p class="badge">メインプロジェクト</p>
++        <h1>Nezumi AI</h1>
++        <p class="tagline">オフライン優先・プライバシー重視の Android ローカルAIチャットアプリ</p>
++        <p class="version">現在のバージョン: <strong>v2.4.0</strong></p>
++        <div class="hero-actions">
++          <a class="btn btn-primary" href="https://github.com/mouse0329/nezumi-ai" target="_blank" rel="noopener">GitHub リポジトリ</a>
++          <a class="btn btn-secondary" href="https://github.com/mouse0329/nezumi-ai/releases" target="_blank" rel="noopener">リリースノート</a>
++        </div>
++      </div>
++    </section>
++
++    <!-- 特徴 -->
++    <section class="features">
++      <div class="container">
++        <h2>主な特徴</h2>
++        <div class="feature-grid">
++          <div class="feature-card">
++            <h3>オフライン優先</h3>
++            <p>オンデバイス推論ではサーバーへデータを送りません。プライバシーを大切にしています。</p>
++          </div>
++          <div class="feature-card">
++            <h3>マルチモデル対応</h3>
++            <p>GGUF / llama.cpp 系モデルをはじめ、Gemma や各種ローカルモデルに対応。クラウドAPIも追加可能です。</p>
++          </div>
++          <div class="feature-card">
++            <h3>高速ネイティブUI</h3>
++            <p>Android ネイティブ（Kotlin + Jetpack Compose）で動作。GPU / NPU / CPU を活用した推論をサポートします。</p>
++          </div>
++          <div class="feature-card">
++            <h3>画像AI・安全機能</h3>
++            <p>画像生成・処理にも対応。AI Safety Model による安全性チェックを搭載しています。</p>
++          </div>
++          <div class="feature-card">
++            <h3>Mini App Platform</h3>
++            <p>拡張可能な Mini App 実行基盤と SDK を用意。プリセットのインポート・エクスポートにも対応。</p>
++          </div>
++          <div class="feature-card">
++            <h3>最新アップデート (v2.4.0)</h3>
++            <p>llama.cpp 直結化、GPUバックエンド対応、推論プロセス分離、Qwen3-TTS 音声合成などを追加しました。</p>
++          </div>
++        </div>
++      </div>
++    </section>
++
++    <!-- Hugging Face -->
++    <section class="huggingface" id="huggingface">
++      <div class="container">
++        <h2>Hugging Face</h2>
++        <p class="section-desc">モデルやツールを公開しています。</p>
++        <div class="hf-cards">
++          <a class="hf-card" href="https://huggingface.co/Mouserat" target="_blank" rel="noopener">
++            <div class="hf-card-header">
++              <span class="hf-label">Profile</span>
++              <h3>Mouserat</h3>
++            </div>
++            <p>mouse0329 の Hugging Face アカウント。GGUF・画像生成モデル・セーフティモデルなどを公開中。</p>
++            <span class="hf-link">huggingface.co/Mouserat →</span>
++          </a>
++          <a class="hf-card highlight" href="https://huggingface.co/Mouserat/titlerat" target="_blank" rel="noopener">
++            <div class="hf-card-header">
++              <span class="hf-label">Model</span>
++              <h3>Mouserat/titlerat</h3>
++            </div>
++            <p>日本語・英語の依頼文から、チャット履歴用の短いタイトル（名詞句）を生成する軽量モデル（mt5-small ベース）。履歴一覧の題名付け向け。Nezumi AI への導入は今後の予定です。</p>
++            <span class="hf-link">モデルページを見る →</span>
++          </a>
++        </div>
++      </div>
++    </section>
++
++    <!-- その他のプロジェクト（端に寄せる） -->
++    <section class="others" id="others">
++      <div class="container">
++        <h2>その他のプロジェクト</h2>
++        <p class="section-desc">過去に作ったものやサイドプロジェクトです。</p>
++        <div class="others-grid">
++          <a class="other-card" href="https://mouse-sketch.netlify.app/" target="_blank" rel="noopener">
++            <h3>ネズミスケッチ</h3>
++            <p>ネズミをテーマにしたドット絵アプリ。アニメーション・レイヤー対応。</p>
++          </a>
++          <a class="other-card" href="https://mouse-sketch.web.app/Inpaint-nezumi/" target="_blank" rel="noopener">
++            <h3>Inpaint-nezumi</h3>
++            <p>不要部分をAIで自然に補完する画像編集ツール（OSS）。</p>
++          </a>
++          <a class="other-card" href="https://nezumi-ai-game.web.app/" target="_blank" rel="noopener">
++            <h3>Nezumi AI Game</h3>
++            <p>鬼ごっこなど、ネズミ関連の小さなゲーム。</p>
++          </a>
++          <a class="other-card" href="https://mouse-archive.web.app/" target="_blank" rel="noopener">
++            <h3>ネズミの保管庫</h3>
++            <p>画像やプロジェクトのアーカイブ。</p>
++          </a>
++          <a class="other-card" href="https://nezumi-color-changer.netlify.app/" target="_blank" rel="noopener">
++            <h3>ネズミカラーチェンジャー</h3>
++            <p>色を変えて楽しむ小さなツール。</p>
++          </a>
++          <a class="other-card" href="https://encodehub.web.app/" target="_blank" rel="noopener">
++            <h3>EncodeHub</h3>
++            <p>動画の再エンコード用ツール。</p>
++          </a>
++        </div>
++      </div>
++    </section>
++
++    <!-- 自己紹介（簡潔） -->
++    <section class="about">
++      <div class="container">
++        <h2>自己紹介</h2>
++        <p>
++          JavaScript / TypeScript / HTML / CSS で Web を作りつつ、
++          現在は特に <strong>Android 上のローカルAI</strong> に力を入れています。
++          Kotlin・Jetpack Compose・NDK・llama.cpp などを使って開発しています。
++        </p>
++        <p>
++          GitHub: <a href="https://github.com/mouse0329" target="_blank" rel="noopener">mouse0329</a>　／　
++          Hugging Face: <a href="https://huggingface.co/Mouserat" target="_blank" rel="noopener">Mouserat</a>
++        </p>
++      </div>
++    </section>
++  </main>
++
++  <footer class="site-footer">
++    <div class="container">
++      <p>© 2026 mouse0329 All Rights Reserved.</p>
++      <p class="footer-note">このサイトおよび掲載コンテンツの著作権は特記がない限り mouse0329 に帰属します。</p>
++    </div>
++  </footer>
++
++  <script src="script.js"></script>
++</body>
++</html>
+diff --git a/script.js b/script.js
+index 165ccf2..7e94757 100644
+--- a/script.js
++++ b/script.js
+@@ -1,77 +1,15 @@
+-document.addEventListener('DOMContentLoaded', function () {
+-    const links = document.querySelectorAll('.menu-link');
+-    const sections = [
+-        { id: 'about', link: null },
+-        { id: 'projects', link: null },
+-        { id: 'mouse-sketch', link: null },
+-        { id: 'mouse-todo', link: null },
+-        { id: 'nezu-tools', link: null },
+-        { id: 'contact', link: null }
+-    ];
+-    sections.forEach(s => {
+-        s.link = document.querySelector('.menu-link[href="#' + s.id + '"]');
+-    });
+-
+-    // スムーズスクロール＋クリックアニメーション
+-    links.forEach(link => {
+-        link.addEventListener('click', function (e) {
+-            const href = link.getAttribute('href');
+-            if (href && href.startsWith('#')) {
+-                const target = document.getElementById(href.slice(1));
+-                if (target) {
+-                    e.preventDefault();
+-
+-                    // 波紋アニメーション
+-                    link.classList.add('ripple-animate');
+-                    setTimeout(() => {
+-                        link.classList.remove('ripple-animate');
+-                    }, 400);
+-
+-                    // スクロール
+-                    const y = target.getBoundingClientRect().top + window.scrollY - 80;
+-                    window.scrollTo({
+-                        top: y,
+-                        behavior: 'smooth'
+-                    });
+-                }
+-            }
+-        });
+-    });
+-
+-    function onScroll() {
+-        let current = null;
+-        for (let i = 0; i < sections.length; i++) {
+-            const section = document.getElementById(sections[i].id);
+-            if (section && window.scrollY + 120 >= section.offsetTop) {
+-                current = sections[i];
+-            }
+-        }
+-        links.forEach(link => link.classList.remove('active'));
+-        if (current && current.link) current.link.classList.add('active');
+-    }
+-
+-    window.addEventListener('scroll', onScroll, { passive: true });
+-    onScroll();
+-
+-    // ハンバーガーメニュー開閉
+-    const menuToggle = document.getElementById('menuToggle');
+-    const sideMenu = document.getElementById('sideMenu');
+-    if (menuToggle && sideMenu) {
+-        menuToggle.addEventListener('click', function () {
+-            const isOpen = sideMenu.classList.toggle('open');
+-            menuToggle.classList.toggle('open', isOpen);
+-            menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+-        });
+-        // メニュークリックで自動的に閉じる
+-        sideMenu.querySelectorAll('.menu-link').forEach(link => {
+-            link.addEventListener('click', function () {
+-                if (window.innerWidth <= 900) {
+-                    sideMenu.classList.remove('open');
+-                    menuToggle.classList.remove('open');
+-                    menuToggle.setAttribute('aria-expanded', 'false');
+-                }
+-            });
+-        });
+-    }
+-});
+-
++document.addEventListener('DOMContentLoaded', function () {
++  // スムーズスクロール
++  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
++    link.addEventListener('click', function (e) {
++      const href = link.getAttribute('href');
++      if (href === '#') return;
++      const target = document.querySelector(href);
++      if (target) {
++        e.preventDefault();
++        const top = target.getBoundingClientRect().top + window.scrollY - 60;
++        window.scrollTo({ top: top, behavior: 'smooth' });
++      }
++    });
++  });
++});
+diff --git a/style.css b/style.css
+index 01dd036..0b47d68 100644
+--- a/style.css
++++ b/style.css
+@@ -1,506 +1,392 @@
+-/*bodyのスタイル*/
+-body {
+-    font-family: 'Arial', sans-serif;
+-    background-color: #f0f0f0;
+-    color: #333333;
+-    margin: 0;
+-    padding: 20px;
+-    display: flex;
+-    justify-content: center;
+-}
+-
+-/*p*/
+-p {
+-    margin: 0;
+-    padding: 0;
+-    line-height: 1.6;
+-    font-size: 20px;
+-    color: #555555;
+-}
+-
+-/*ヘッダーのスタイル*/
+-.header {
+-    /*ヘッダーの背景色(グラデーションピンク鼠色)*/
+-    background: linear-gradient(to right, #9c9c9c, #ffb6c1);
+-    padding: 20px;
+-    border-radius: 8px;
+-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+-    width: 100%;
+-    max-width: 800px;
+-    text-align: center;
+-    display: flex;
+-    flex-direction: column;
+-    align-items: center;
+-}
+-
+-/*ヘッダーバーのスタイル*/
+-.header-bar {
+-    width: 100%;
+-    height: auto;
+-    padding: 5px;
+-    background-color: #bfbfbf;
+-    color: #ffffff;
+-    border-radius: 15px;
+-    position: absolute;
+-    top: 0;
+-    left: 0;
+-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+-}
+-
+-.header-bar h1 {
+-    margin: 0;
+-    font-size: 24px;
+-    font-weight: bold;
+-    text-align: center;
+-    color: #ffffff;
+-    display: flex;
+-    align-items: center;
+-    justify-content: center;
+-}
+-
+-.header-bar-height {
+-    /* ヘッダーバーの高さ */
+-    height: 88px;
+-}
+-
+-/*ボタンのスタイル*/
+-button,
+-input[type="button"],
+-button.input,
+-a {
+-    color: #000000;
+-    border: none;
+-    padding: 10px 20px;
+-    font-size: 16px;
+-    border-radius: 8px;
+-    cursor: pointer;
+-    transition: all 0.3s ease-in-out;
+-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+-}
+-
+-button:hover,
+-input[type="button"]:hover,
+-a:hover,
+-button:focus,
+-input[type="button"]:focus,
+-button.input:hover,
+-a:focus {
+-    background-color: #f0f0f0;
+-    color: #333333;
+-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+-}
+-
+-/*マスコットキャラクターのスタイル*/
+-#colorTarget {
+-    width: 300px;
+-    height: 200px;
+-    background-color: #a7a7a7;
+-    border: 2px solid #444;
+-    margin-bottom: 10px;
+-    position: relative;
+-    display: flex;
+-    justify-content: center;
+-    align-items: center;
+-    overflow: visible;
+-    border-radius: 20px;
+-    /* 角丸チュー */
+-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+-}
+-
+-#colorTarget {
+-    transition: background 2s linear;
+-}
+-
+-
+-#colorTarget img {
+-    width: 230px;
+-    height: auto;
+-    position: relative;
+-    z-index: 2;
+-    transform: scaleX(-1);
+-}
+-
+-.speech-bubble {
+-    position: absolute;
+-    top: 10px;
+-    left: 50%;
+-    transform: translateX(50%);
+-    background: rgba(255, 255, 255, 0.7);
+-    color: rgb(0, 0, 0);
+-    padding: 8px 12px;
+-    border-radius: 15px;
+-    max-width: 180px;
+-    font-size: 14px;
+-    z-index: 1;
+-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+-    white-space: nowrap;
+-}
+-
+-.speech-bubble::after {
+-    content: "";
+-    position: absolute;
+-    bottom: -12px;
+-    left: 20px;
+-    border-width: 10px 10px 0 0;
+-    border-style: solid;
+-    border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent;
+-}
+-
+-/*ナビゲーションメニューのスタイル*/
+-nav {
+-    margin-top: 20px;
+-    text-align: center;
+-}
+-
+-/*アバウトセクションのスタイル*/
+-.about {
+-    background-color: #ffffff;
+-    padding: 20px;
+-    border-radius: 8px;
+-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+-    margin-top: 20px;
+-    max-width: 800px;
+-    width: 100%;
+-    text-align: left;
+-    line-height: 1.6;
+-    font-size: 18px;
+-    color: #333333;
+-}
+-
+-/*プロジェクトセクションのスタイル*/
+-.projects {
+-    background-color: #ffffff;
+-    padding: 20px;
+-    border-radius: 8px;
+-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+-    margin-top: 20px;
+-    max-width: 800px;
+-    width: 100%;
+-    text-align: left;
+-    line-height: 1.6;
+-    font-size: 18px;
+-    color: #333333;
+-}
+-
+-.projects .project-item {
+-    margin-bottom: 20px;
+-    box-shadow: #000000 0px 2px 4px rgba(0, 0, 0, 0.1);
+-    border: #000000 1px solid;
+-}
+-
+-.project-name {
+-    font-weight: bold;
+-    color: #000000c3;
+-    text-decoration: none;
+-    background-color: #b0b0b0c3;
+-}
+-
+-.project-name:hover {
+-    text-decoration: underline;
+-}
+-
+-/* ハンバーガーメニューボタン */
+-.menu-toggle {
+-    display: none;
+-    position: fixed;
+-    top: 16px;
+-    right: 16px;
+-    z-index: 200;
+-    width: 48px;
+-    height: 48px;
+-    background: #fff;
+-    border: none;
+-    border-radius: 8px;
+-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+-    flex-direction: column;
+-    justify-content: center;
+-    align-items: center;
+-    cursor: pointer;
+-    padding: 0;
+-    transition: background 0.2s;
+-    margin: 20px 20px 0px 0;
+-}
+-
+-.menu-toggle span {
+-    display: block;
+-    width: 28px;
+-    height: 4px;
+-    margin: 5px auto;
+-    background: #888;
+-    border-radius: 2px;
+-    transition: all 0.3s;
+-}
+-
+-.menu-toggle.open span:nth-child(1) {
+-    transform: translateY(11px) rotate(45deg);
+-}
+-
+-.menu-toggle.open span:nth-child(2) {
+-    opacity: 0;
+-}
+-
+-.menu-toggle.open span:nth-child(3) {
+-    transform: translateY(-18px) rotate(-45deg);
+-}
+-
+-/* サイドメニューのスタイル */
+-.side-menu {
+-    position: fixed;
+-    top: 88px;
+-    right: 0;
+-    width: 180px;
+-    height: calc(100vh - 88px);
+-    background: #fff;
+-    border-top-left-radius: 16px;
+-    border-bottom-left-radius: 16px;
+-    border-top-right-radius: 0;
+-    border-bottom-right-radius: 0;
+-    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.13);
+-    padding: 30px 12px 30px 12px;
+-    z-index: 100;
+-    text-align: center;
+-    font-size: 18px;
+-    display: flex;
+-    flex-direction: column;
+-    align-items: center;
+-    justify-content: flex-start;
+-}
+-
+-/* サイドメニュー内のnavを縦中央寄せにしたい場合は以下を追加 */
+-/*
+-.side-menu nav {
+-    flex: 1;
+-    display: flex;
+-    flex-direction: column;
+-    justify-content: center;
+-}
+-*/
+-
+-.side-menu nav ul {
+-    list-style: none;
+-    padding: 0;
+-    margin: 0;
+-}
+-
+-.side-menu nav ul li {
+-    margin: 18px 0;
+-}
+-
+-/* .containerの右側に余白を追加（サイドメニュー分） */
+-.container {
+-    margin-right: 200px;
+-}
+-
+-.menu-link.active {
+-    background-color: #bfbfbf;
+-    color: #fff !important;
+-    pointer-events: none;
+-}
+-
+-a.menu-link.active {
+-    background-color: #bfbfbf !important;
+-    color: #fff !important;
+-    pointer-events: none;
+-}
+-
+-a.menu-link.ripple-animate {
+-    position: relative;
+-    overflow: hidden;
+-    animation: ripple-bg 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+-}
+-
+-@keyframes ripple-bg {
+-    0% {
+-        background-color: #bfbfbf;
+-        box-shadow: 0 0 0 0 #bfbfbf;
+-    }
+-
+-    70% {
+-        background-color: #bfbfbf;
+-        box-shadow: 0 0 10px 10px #bfbfbf44;
+-    }
+-
+-    100% {
+-        background-color: #bfbfbf;
+-        box-shadow: 0 0 0 0 #bfbfbf00;
+-    }
+-}
+-
+-.submenu {
+-    top: 100%;
+-    left: 0;
+-    background: #acacac;
+-    border-radius: 8px;
+-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+-    padding: 10px;
+-    z-index: 200;
+-    padding: 8px 12px;
+-    height: 180px;
+-}
+-
+-.submenu .menu-link {
+-    background-color: #cecece;
+-    color: #000000;
+-    padding: 8px 12px;
+-    border-radius: 4px;
+-    margin: 4px 0;
+-    text-decoration: none;
+-}
+-
+-.submenu .menu-link:hover {
+-    background-color: #626262;
+-    color: #fff;
+-}
+-
+-.submenu .menu-link-sub {
+-    background-color: #383838;
+-    color: #fff;
+-    padding: 8px 12px;
+-    border-radius: 4px;
+-    margin: 4px 0;
+-    text-decoration: none;
+-}
+-
+-.submenu .menu-link-sub:hover {
+-    background-color: #626262;
+-    color: #fff;
+-}
+-
+-/* お問い合わせセクションのスタイル */
+-.contact {
+-    background-color: #fff;
+-    padding: 28px 24px 24px 24px;
+-    border-radius: 12px;
+-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+-    margin-top: 20px;
+-    max-width: 800px;
+-    width: 100%;
+-    text-align: left;
+-    line-height: 1.7;
+-    font-size: 18px;
+-    color: #333;
+-}
+-
+-.contact h2 {
+-    margin-top: 0;
+-    color: #767676;
+-    font-size: 26px;
+-    letter-spacing: 2px;
+-}
+-
+-.contact form {
+-    margin-top: 18px;
+-    display: flex;
+-    flex-direction: column;
+-    gap: 14px;
+-}
+-
+-.contact label {
+-    font-weight: bold;
+-    margin-bottom: 4px;
+-    color: #666;
+-}
+-
+-.contact input[type="text"],
+-.contact input[type="email"],
+-.contact textarea {
+-    width: 100%;
+-    max-width: 480px;
+-    padding: 10px 12px;
+-    border: 1.5px solid #d1bfa7;
+-    border-radius: 8px;
+-    font-size: 16px;
+-    background: #faf8f6;
+-    color: #333;
+-    transition: border 0.2s;
+-    box-sizing: border-box;
+-    resize: vertical;
+-}
+-
+-.contact input[type="text"]:focus,
+-.contact input[type="email"]:focus,
+-.contact textarea:focus {
+-    border: 1.5px solid #626262;
+-    outline: none;
+-    background: #fff;
+-}
+-
+-.contact button[type="submit"] {
+-    background: linear-gradient(to right, #737373, #868686);
+-    color: #fff;
+-    font-weight: bold;
+-    border: none;
+-    border-radius: 8px;
+-    padding: 12px 32px;
+-    font-size: 18px;
+-    cursor: pointer;
+-    box-shadow: 0 2px 8px rgba(180, 138, 120, 0.10);
+-    transition: background 0.2s, transform 0.1s;
+-    margin-top: 8px;
+-    align-self: flex-start;
+-}
+-
+-.contact button[type="submit"]:hover {
+-    background: linear-gradient(to right, #383838, #a0a0a0);
+-    transform: translateY(-2px) scale(1.03);
+-}
+-
+-@media (max-width: 600px) {
+-    .contact {
+-        padding: 14px 6px 16px 6px;
+-        font-size: 16px;
+-    }
+-
+-    .contact input[type="text"],
+-    .contact input[type="email"],
+-    .contact textarea {
+-        max-width: 100%;
+-        font-size: 15px;
+-    }
+-
+-    .contact button[type="submit"] {
+-        font-size: 16px;
+-        padding: 10px 18px;
+-    }
+-}
+-
+-@media (max-width: 900px) {
+-    .menu-toggle {
+-        display: flex;
+-    }
+-
+-    .side-menu {
+-        position: fixed;
+-        top: 64px;
+-        right: 0;
+-        width: 80vw;
+-        max-width: 320px;
+-        height: calc(100vh - 64px);
+-        background: #fff;
+-        border-radius: 0 0 0 16px;
+-        box-shadow: -4px 0 12px rgba(0, 0, 0, 0.13);
+-        padding: 30px 12px 30px 12px;
+-        z-index: 150;
+-        text-align: center;
+-        font-size: 18px;
+-        display: flex;
+-        flex-direction: column;
+-        align-items: center;
+-        justify-content: flex-start;
+-        transform: translateX(100%);
+-        transition: transform 0.3s cubic-bezier(.4, 0, .2, 1);
+-        margin: 0;
+-        border-radius: 15px;
+-    }
+-
+-    .side-menu.open {
+-        transform: translateX(0);
+-    }
+-
+-    .container {
+-        margin-right: 0 !important;
+-    }
+-}
+-.nezumis{
+-    display: flex;
+-}
+\ No newline at end of file
++/* ===== Base ===== */
++:root {
++  --bg: #f5f5f7;
++  --surface: #ffffff;
++  --text: #1d1d1f;
++  --text-secondary: #6e6e73;
++  --accent: #5c5c5c;
++  --accent-hover: #3a3a3a;
++  --pink: #ffb6c1;
++  --border: #e5e5e7;
++  --radius: 12px;
++  --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
++  --max-width: 960px;
++}
++
++* {
++  box-sizing: border-box;
++  margin: 0;
++  padding: 0;
++}
++
++body {
++  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
++  background: var(--bg);
++  color: var(--text);
++  line-height: 1.6;
++  font-size: 16px;
++}
++
++a {
++  color: inherit;
++  text-decoration: none;
++}
++
++img {
++  max-width: 100%;
++  height: auto;
++}
++
++.container {
++  max-width: var(--max-width);
++  margin: 0 auto;
++  padding: 0 20px;
++}
++
++/* ===== Header ===== */
++.site-header {
++  position: sticky;
++  top: 0;
++  z-index: 100;
++  background: rgba(255, 255, 255, 0.9);
++  backdrop-filter: blur(12px);
++  border-bottom: 1px solid var(--border);
++}
++
++.header-inner {
++  max-width: var(--max-width);
++  margin: 0 auto;
++  padding: 12px 20px;
++  display: flex;
++  align-items: center;
++  justify-content: space-between;
++}
++
++.logo {
++  display: flex;
++  align-items: center;
++  gap: 10px;
++  font-weight: 700;
++  font-size: 1.15rem;
++}
++
++.logo img {
++  border-radius: 50%;
++  background: #e0e0e0;
++}
++
++.main-nav {
++  display: flex;
++  gap: 8px;
++  flex-wrap: wrap;
++}
++
++.main-nav a {
++  padding: 6px 12px;
++  border-radius: 8px;
++  font-size: 0.9rem;
++  color: var(--text-secondary);
++  transition: background 0.2s, color 0.2s;
++}
++
++.main-nav a:hover {
++  background: #f0f0f0;
++  color: var(--text);
++}
++
++/* ===== Hero ===== */
++.hero {
++  background: linear-gradient(135deg, #6b6b6b 0%, #9c9c9c 50%, #ffb6c1 100%);
++  color: #fff;
++  padding: 64px 20px 72px;
++  text-align: center;
++}
++
++.hero-content {
++  max-width: 640px;
++  margin: 0 auto;
++}
++
++.badge {
++  display: inline-block;
++  background: rgba(255, 255, 255, 0.25);
++  padding: 4px 14px;
++  border-radius: 999px;
++  font-size: 0.8rem;
++  font-weight: 600;
++  margin-bottom: 16px;
++  letter-spacing: 0.05em;
++}
++
++.hero h1 {
++  font-size: clamp(2.4rem, 6vw, 3.4rem);
++  font-weight: 800;
++  letter-spacing: -0.02em;
++  margin-bottom: 12px;
++  line-height: 1.15;
++}
++
++.tagline {
++  font-size: 1.15rem;
++  opacity: 0.95;
++  margin-bottom: 8px;
++}
++
++.version {
++  font-size: 0.95rem;
++  opacity: 0.85;
++  margin-bottom: 28px;
++}
++
++.hero-actions {
++  display: flex;
++  gap: 12px;
++  justify-content: center;
++  flex-wrap: wrap;
++}
++
++.btn {
++  display: inline-block;
++  padding: 12px 24px;
++  border-radius: 10px;
++  font-weight: 600;
++  font-size: 0.95rem;
++  transition: transform 0.15s, box-shadow 0.15s;
++}
++
++.btn:hover {
++  transform: translateY(-2px);
++}
++
++.btn-primary {
++  background: #fff;
++  color: #333;
++  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
++}
++
++.btn-primary:hover {
++  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
++}
++
++.btn-secondary {
++  background: rgba(255, 255, 255, 0.2);
++  color: #fff;
++  border: 1px solid rgba(255, 255, 255, 0.4);
++}
++
++.btn-secondary:hover {
++  background: rgba(255, 255, 255, 0.3);
++}
++
++/* ===== Features ===== */
++.features {
++  padding: 56px 0;
++}
++
++.features h2,
++.huggingface h2,
++.others h2,
++.about h2 {
++  font-size: 1.6rem;
++  margin-bottom: 8px;
++  text-align: center;
++}
++
++.section-desc {
++  text-align: center;
++  color: var(--text-secondary);
++  margin-bottom: 28px;
++  font-size: 0.95rem;
++}
++
++.feature-grid {
++  display: grid;
++  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
++  gap: 16px;
++  margin-top: 24px;
++}
++
++.feature-card {
++  background: var(--surface);
++  border-radius: var(--radius);
++  padding: 22px;
++  box-shadow: var(--shadow);
++  border: 1px solid var(--border);
++}
++
++.feature-card h3 {
++  font-size: 1.05rem;
++  margin-bottom: 8px;
++  color: var(--text);
++}
++
++.feature-card p {
++  font-size: 0.9rem;
++  color: var(--text-secondary);
++  line-height: 1.55;
++}
++
++/* ===== Hugging Face ===== */
++.huggingface {
++  padding: 48px 0 56px;
++  background: #ebebed;
++}
++
++.hf-cards {
++  display: grid;
++  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
++  gap: 16px;
++}
++
++.hf-card {
++  background: var(--surface);
++  border-radius: var(--radius);
++  padding: 24px;
++  box-shadow: var(--shadow);
++  border: 1px solid var(--border);
++  transition: transform 0.15s, box-shadow 0.15s;
++  display: block;
++}
++
++.hf-card:hover {
++  transform: translateY(-3px);
++  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
++}
++
++.hf-card.highlight {
++  border-color: #ffb6c1;
++  background: linear-gradient(180deg, #fff 0%, #fff5f7 100%);
++}
++
++.hf-card-header {
++  display: flex;
++  align-items: center;
++  gap: 10px;
++  margin-bottom: 10px;
++}
++
++.hf-label {
++  font-size: 0.7rem;
++  font-weight: 700;
++  text-transform: uppercase;
++  letter-spacing: 0.06em;
++  background: #eee;
++  padding: 3px 8px;
++  border-radius: 6px;
++  color: var(--text-secondary);
++}
++
++.hf-card.highlight .hf-label {
++  background: #ffd6e0;
++  color: #8b3a4a;
++}
++
++.hf-card h3 {
++  font-size: 1.15rem;
++}
++
++.hf-card p {
++  font-size: 0.9rem;
++  color: var(--text-secondary);
++  margin-bottom: 12px;
++}
++
++.hf-link {
++  font-size: 0.85rem;
++  font-weight: 600;
++  color: #5a5a5a;
++}
++
++/* ===== Others (端に寄せる) ===== */
++.others {
++  padding: 48px 0 40px;
++}
++
++.others-grid {
++  display: grid;
++  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
++  gap: 12px;
++}
++
++.other-card {
++  background: var(--surface);
++  border-radius: 10px;
++  padding: 16px;
++  border: 1px solid var(--border);
++  transition: background 0.15s;
++}
++
++.other-card:hover {
++  background: #f8f8fa;
++}
++
++.other-card h3 {
++  font-size: 0.95rem;
++  margin-bottom: 4px;
++}
++
++.other-card p {
++  font-size: 0.8rem;
++  color: var(--text-secondary);
++  line-height: 1.45;
++}
++
++/* ===== About ===== */
++.about {
++  padding: 40px 0 56px;
++  background: var(--surface);
++  border-top: 1px solid var(--border);
++}
++
++.about p {
++  max-width: 640px;
++  margin: 0 auto 12px;
++  text-align: center;
++  color: var(--text-secondary);
++  font-size: 0.95rem;
++}
++
++.about a {
++  color: var(--accent);
++  text-decoration: underline;
++  text-underline-offset: 2px;
++}
++
++.about a:hover {
++  color: var(--accent-hover);
++}
++
++/* ===== Footer ===== */
++.site-footer {
++  padding: 28px 20px;
++  text-align: center;
++  background: #2a2a2a;
++  color: #ccc;
++  font-size: 0.85rem;
++}
++
++.footer-note {
++  margin-top: 6px;
++  font-size: 0.75rem;
++  opacity: 0.7;
++}
++
++/* ===== Responsive ===== */
++@media (max-width: 640px) {
++  .hero {
++    padding: 48px 16px 56px;
++  }
++
++  .main-nav {
++    gap: 4px;
++  }
++
++  .main-nav a {
++    padding: 5px 8px;
++    font-size: 0.8rem;
++  }
++
++  .feature-grid {
++    grid-template-columns: 1fr;
++  }
++}

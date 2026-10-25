@@ -1,133 +1,176 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8" />
-    <title>ねずみのポートフォリオサイト | Web開発・3D・ツール制作</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="ねずみのポートフォリオサイトでは、Webアプリ、3Dモデリング、ツール開発などのプロジェクトを紹介しています。" />
-    <meta name="keywords" content="ポートフォリオ, Web開発, JavaScript, 3Dモデリング, ネズミ, ツール, Supabase" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="colormouse.js"></script>
-    <script src="script.js"></script>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
-    <!-- 構造化データ（JSON-LD） -->
-    <script type="application/ld+json">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ねずみのポートフォリオ | Nezumi AI</title>
+  <meta name="description" content="プライバシー重視のローカルAIアプリ「Nezumi AI」を中心に紹介するねずみのポートフォリオサイトです。" />
+  <meta name="keywords" content="Nezumi AI, ねずみAI, ローカルAI, Android AI, GGUF, llama.cpp, mouse0329, Mouserat" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "ねずみ",
-    "url": "https://mouse-portfolio.netlify.app",
+    "url": "https://mouse0329.github.io",
     "sameAs": [
-      "https://github.com/mouse0329"
+      "https://github.com/mouse0329",
+      "https://huggingface.co/Mouserat"
     ],
-    "jobTitle": "Web開発者",
-    "description": "Webアプリ・ツール開発・3Dモデリングに取り組むネズミです。"
+    "jobTitle": "Android / AI 開発者",
+    "description": "プライバシー重視のローカルAIアプリ Nezumi AI を開発しています。"
   }
   </script>
 </head>
-
 <body>
-    <header class="header-bar">
-        <h1>
-            <img src="img/MouseClear.png" alt="ネズミのマスコットキャラ チューチュー" width="100" height="100">
-            ねずみのポートフォリオサイト
-        </h1>
-    </header>
-
-    <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="sideMenu">
-        <span></span><span></span><span></span>
-    </button>
-    <div class="side-menu" id="sideMenu">
-        <p>メニュー</p>
-        <nav>
-            <ul>
-                <li><a href="#about" class="menu-link">自己紹介</a></li>
-                <br>
-                <ul class="submenu">
-                    <li><a href="#projects" class="menu-link">プロジェクト</a>
-                    <li><a href="#mouse-sketch" class="menu-link-sub">ネズミスケッチ</a></li>
-                    <li><a href="#inpaint-nezumi" class="menu-link-sub">Inpaint-nezumi</a></li>
-                    <li><a href="#other-projects" class="menu-link-sub">その他のプロジェクト</a></li>
-                </ul>
-                </li>
-                <br>
-            </ul>
-        </nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <img src="img/MouseClear.png" alt="チューチュー" width="48" height="48" onerror="this.style.display='none'">
+        <span>ねずみ</span>
+      </a>
+      <nav class="main-nav">
+        <a href="#nezumi-ai">Nezumi AI</a>
+        <a href="#huggingface">Hugging Face</a>
+        <a href="#others">その他</a>
+        <a href="https://github.com/mouse0329" target="_blank" rel="noopener">GitHub</a>
+      </nav>
     </div>
-    <div class="container">
-        <div class="header-bar-height"></div>
-        <header id="header" class="header">
-            <h2>ねずみのポートフォリオサイト</h2>
-            <p>ようこそ！これはねずみのポートフォリオサイトです。</p>
-            <p>ここでは、ねずみの作品や活動を紹介しています。</p>
-            <p>最新のプロジェクト情報をチェックしてください。</p>
-            <h3>マスコットキャラクターの紹介</h3>
-            <p>ねずみのチューチューです。</p>
-            <div id="colorTarget">
-                <img src="img/MouseClear.png" alt="ネズミのマスコットキャラ チューチュー">
-                <div class="speech-bubble" id="speechBubble">おはようチュー！</div>
+  </header>
+
+  <main>
+    <!-- Hero / Nezumi AI メイン -->
+    <section class="hero" id="nezumi-ai">
+      <div class="hero-content">
+        <p class="badge">メインプロジェクト</p>
+        <h1>Nezumi AI</h1>
+        <p class="tagline">オフライン優先・プライバシー重視の Android ローカルAIチャットアプリ</p>
+        <p class="version">現在のバージョン: <strong>v2.4.0</strong></p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://github.com/mouse0329/nezumi-ai" target="_blank" rel="noopener">GitHub リポジトリ</a>
+          <a class="btn btn-secondary" href="https://github.com/mouse0329/nezumi-ai/releases" target="_blank" rel="noopener">リリースノート</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 特徴 -->
+    <section class="features">
+      <div class="container">
+        <h2>主な特徴</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>オフライン優先</h3>
+            <p>オンデバイス推論ではサーバーへデータを送りません。プライバシーを大切にしています。</p>
+          </div>
+          <div class="feature-card">
+            <h3>マルチモデル対応</h3>
+            <p>GGUF / llama.cpp 系モデルをはじめ、Gemma や各種ローカルモデルに対応。クラウドAPIも追加可能です。</p>
+          </div>
+          <div class="feature-card">
+            <h3>高速ネイティブUI</h3>
+            <p>Android ネイティブ（Kotlin + Jetpack Compose）で動作。GPU / NPU / CPU を活用した推論をサポートします。</p>
+          </div>
+          <div class="feature-card">
+            <h3>画像AI・安全機能</h3>
+            <p>画像生成・処理にも対応。AI Safety Model による安全性チェックを搭載しています。</p>
+          </div>
+          <div class="feature-card">
+            <h3>Mini App Platform</h3>
+            <p>拡張可能な Mini App 実行基盤と SDK を用意。プリセットのインポート・エクスポートにも対応。</p>
+          </div>
+          <div class="feature-card">
+            <h3>最新アップデート (v2.4.0)</h3>
+            <p>llama.cpp 直結化、GPUバックエンド対応、推論プロセス分離、Qwen3-TTS 音声合成などを追加しました。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hugging Face -->
+    <section class="huggingface" id="huggingface">
+      <div class="container">
+        <h2>Hugging Face</h2>
+        <p class="section-desc">モデルやツールを公開しています。</p>
+        <div class="hf-cards">
+          <a class="hf-card" href="https://huggingface.co/Mouserat" target="_blank" rel="noopener">
+            <div class="hf-card-header">
+              <span class="hf-label">Profile</span>
+              <h3>Mouserat</h3>
             </div>
-        </header>
+            <p>mouse0329 の Hugging Face アカウント。GGUF・画像生成モデル・セーフティモデルなどを公開中。</p>
+            <span class="hf-link">huggingface.co/Mouserat →</span>
+          </a>
+          <a class="hf-card highlight" href="https://huggingface.co/Mouserat/titlerat" target="_blank" rel="noopener">
+            <div class="hf-card-header">
+              <span class="hf-label">Model</span>
+              <h3>Mouserat/titlerat</h3>
+            </div>
+            <p>日本語・英語の依頼文から、チャット履歴用の短いタイトル（名詞句）を生成する軽量モデル（mt5-small ベース）。履歴一覧の題名付け向け。Nezumi AI への導入は今後の予定です。</p>
+            <span class="hf-link">モデルページを見る →</span>
+          </a>
+        </div>
+      </div>
+    </section>
 
-        <section id="about" class="about">
-            <h2>自己紹介</h2>
-            <p>私はJavaScript、TypeScript、HTML、CSSを使ってウェブサイトを作成しています。</p>
-            <p>趣味はプログラミングです。</p>
-            <p>Blenderを使った3Dモデリングにも挑戦しています。</p>
-            <p>Unityを使ったゲーム開発も少しずつ学んでいます。</p>
-            <p>デザインはあまり得意ではありませんが、楽しんで取り組んでいます。</p>
-            <p>私のGitHubアカウントは <a href="https://github.com/mouse0329" target="_blank" rel="noopener">mouse0329</a>
-                です。
-            </p>
-            <p>私のポートフォリオをぜひご覧ください。</p>
-        </section>
+    <!-- その他のプロジェクト（端に寄せる） -->
+    <section class="others" id="others">
+      <div class="container">
+        <h2>その他のプロジェクト</h2>
+        <p class="section-desc">過去に作ったものやサイドプロジェクトです。</p>
+        <div class="others-grid">
+          <a class="other-card" href="https://mouse-sketch.netlify.app/" target="_blank" rel="noopener">
+            <h3>ネズミスケッチ</h3>
+            <p>ネズミをテーマにしたドット絵アプリ。アニメーション・レイヤー対応。</p>
+          </a>
+          <a class="other-card" href="https://mouse-sketch.web.app/Inpaint-nezumi/" target="_blank" rel="noopener">
+            <h3>Inpaint-nezumi</h3>
+            <p>不要部分をAIで自然に補完する画像編集ツール（OSS）。</p>
+          </a>
+          <a class="other-card" href="https://nezumi-ai-game.web.app/" target="_blank" rel="noopener">
+            <h3>Nezumi AI Game</h3>
+            <p>鬼ごっこなど、ネズミ関連の小さなゲーム。</p>
+          </a>
+          <a class="other-card" href="https://mouse-archive.web.app/" target="_blank" rel="noopener">
+            <h3>ネズミの保管庫</h3>
+            <p>画像やプロジェクトのアーカイブ。</p>
+          </a>
+          <a class="other-card" href="https://nezumi-color-changer.netlify.app/" target="_blank" rel="noopener">
+            <h3>ネズミカラーチェンジャー</h3>
+            <p>色を変えて楽しむ小さなツール。</p>
+          </a>
+          <a class="other-card" href="https://encodehub.web.app/" target="_blank" rel="noopener">
+            <h3>EncodeHub</h3>
+            <p>動画の再エンコード用ツール。</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-        <section id="projects" class="projects">
-            <h2>プロジェクト</h2>
-            <p>現在進行中のプロジェクトや過去の作品を紹介します。</p>
+    <!-- 自己紹介（簡潔） -->
+    <section class="about">
+      <div class="container">
+        <h2>自己紹介</h2>
+        <p>
+          JavaScript / TypeScript / HTML / CSS で Web を作りつつ、
+          現在は特に <strong>Android 上のローカルAI</strong> に力を入れています。
+          Kotlin・Jetpack Compose・NDK・llama.cpp などを使って開発しています。
+        </p>
+        <p>
+          GitHub: <a href="https://github.com/mouse0329" target="_blank" rel="noopener">mouse0329</a>　／　
+          Hugging Face: <a href="https://huggingface.co/Mouserat" target="_blank" rel="noopener">Mouserat</a>
+        </p>
+      </div>
+    </section>
+  </main>
 
-            <section class="project-item" id="mouse-sketch">
-                <h3><a class="project-name" href="https://mouse-sketch.netlify.app/">ネズミスケッチ</a></h3>
-                <dir class="nezumis">
-                    <img src="data:image/webp;base64,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" alt="ネズミスケッチのアイコン" width="50" height="50">
-                    <img src="https://mouse-sketch.web.app/img/nezumisuketitext.png" alt="ネズミスケッチのテキスト" >
-                </dir>
-                <img src="https://mouse-sketch.web.app/assets/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-BBBS5w4E.png" alt="ネズミスケッチのスクリーンショット" width="300"
-                    height="200">
-                <p>ネズミスケッチは、ネズミをテーマにしたドット絵アプリです。ユーザーは自由にネズミのドット絵を描くことができます。アニメーションやレイヤー機能もあり、保存・共有が可能です。</p>
-            </section>
-            <section class="project-item">
-                <h3><a class="project-name" href="https://mouse-sketch.web.app/Inpaint-nezumi/">Inpaint-nezumi</a></h3>
-                <img src="data:image/webp;base64,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" alt="Inpaint-nezumiのアイコン" width="100" height="100">
-                <img src="/nezumi-inpaint.png" alt="Inpaint-nezumiのスクリーンショット" width="300" height="200">
-                <p>Inpaint-nezumiは、画像の不要な部分を消すことができるツールです。ユーザーは消したい部分を選択し、AIが自然な背景で埋めてくれます。写真の修正やオブジェクトの削除に便利です。</p>
-                <p>現在はベータ版で、今後さらに機能を追加していく予定です。</p>
-                <p>これはossプロジェクトです。アパッチライセンスの下で公開されています。</p>
-        </section>
-        <section>
-            <h3>その他のプロジェクト</h3>
-            <ul>
-                <li><a href="https://github.com/nezumi-sketch/mouse-sketch">ネズミスケッチ</a></li>
-                <li><a href="https://github.com/nezumi-sketch/inpaint-nezumi">Inpaint-nezumi</a></li>
-                <li><a href="https://nezumi-ai-game.web.app/">Nezumi AI Game鬼ごっこ</a></li>
-                <li><a href="https://mouse-archive.web.app/?">ネズミの画像やプロジェクト保管庫</a></li>
-                <li><a href="https://nezumi-color-changer.netlify.app/">ネズミカラーチェンジャー</a></li>
-                <li><a href="https://encodehub.web.app/">動画のエンコードし直すエンコードハブ</a></li>
-                <li><a href="https://synthesizer-chu-web.netlify.app/">シンセサイザーチューチュー</a></li>
-            </ul>
-        </section>
-        </section>
-
-        <section id="copyright" class="copyright">
-            <h2>著作権情報</h2>
-            <p>このサイトおよび掲載されている全てのコンテンツ（画像、テキスト、ソースコード等）の著作権は、<a href="https://github.com/mouse0329"
-                    target="_blank">mouse0329</a> に帰属します。</p>
-            <p>無断での転載・複製・再配布を禁じます。</p>
-            <p>© 2025 <a href="https://github.com/mouse0329" target="_blank">mouse0329</a> All Rights Reserved.</p>
-        </section>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 mouse0329 All Rights Reserved.</p>
+      <p class="footer-note">このサイトおよび掲載コンテンツの著作権は特記がない限り mouse0329 に帰属します。</p>
     </div>
-</body>
+  </footer>
 
+  <script src="script.js"></script>
+</body>
 </html>
